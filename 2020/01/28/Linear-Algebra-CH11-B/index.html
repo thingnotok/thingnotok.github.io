@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hello World |  TNOK
+    Linear-Algebra-CH11-B |  TNOK
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -27,7 +27,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-hello-world" class="article article-type-post" itemscope
+  <article id="post-Linear-Algebra-CH11-B" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -35,7 +35,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World
+  Linear-Algebra-CH11-B
 </h1>
   
 
@@ -44,10 +44,14 @@
 
     
     <div class="article-meta">
-      <a href="/2020/01/28/hello-world/" class="article-date">
-  <time datetime="2020-01-28T06:58:55.093Z" itemprop="datePublished">2020-01-28</time>
+      <a href="/2020/01/28/Linear-Algebra-CH11-B/" class="article-date">
+  <time datetime="2020-01-28T08:31:50.000Z" itemprop="datePublished">2020-01-28</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Lecture-Notes/">Lecture Notes</a>
+  </div>
+
       
       
 <div class="word_count">
@@ -55,7 +59,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字數統計 :</span>
-            <span class="post-count">73字</span>
+            <span class="post-count">1.7k字</span>
         </span>
     </span>
 
@@ -64,7 +68,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 閱讀時長 ≈</span>
-            <span class="post-count">1分鐘</span>
+            <span class="post-count">8分鐘</span>
         </span>
     </span>
 </div>
@@ -90,24 +94,54 @@
       
 
       
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+      <h1 id="LA-Lec11-B-Orthogonality-II"><a href="#LA-Lec11-B-Orthogonality-II" class="headerlink" title="LA Lec11(B): Orthogonality II"></a>LA Lec11(B): Orthogonality II</h1><h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><ul>
+<li><p>Example:<br>  把$b$投影到$a$<br>  $$b=\begin{bmatrix}1\1\1\end{bmatrix}, a=\begin{bmatrix}1\2\2\end{bmatrix}$$<br>  Projection matrix<br>  $$P=\frac{aa^T}{a^Ta}=\frac{1}{9}\begin{bmatrix}1\2\2\end{bmatrix}\begin{bmatrix}1\ 2\ 2\end{bmatrix}$$<br>  $$P=\frac{1}{9}\begin{bmatrix}1\ 2\ 2\2\ 4\ 4\2\ 4\ 4\end{bmatrix}$$<br>  Projection vector<br>  $$p=Pb=\frac{1}{9}\begin{bmatrix}1\ 2\ 2\2\ 4\ 4\2\ 4\ 4\end{bmatrix}\begin{bmatrix}1\1\1\end{bmatrix}$$<br>  $$p=\frac{1}{9}\begin{bmatrix}5\10\10\end{bmatrix}$$<br>  Verify: 算出error vector 做驗算($e\perp p$ or $e\perp a$)<br>  $$e=b-p=\begin{bmatrix}1\1\1\end{bmatrix}-\frac{1}{9}\begin{bmatrix}5\10\10\end{bmatrix}=\frac{1}{9}\begin{bmatrix}4\-1\-1\end{bmatrix}$$<br>  $$a^Te=\frac{1}{9}\begin{bmatrix}1\ 2\ 2\end{bmatrix}\begin{bmatrix}4\-1\-1\end{bmatrix}=0$$</p>
+</li>
+<li><p>Note that $P^2=P$:<br>  $$P^2=PP=\frac{1}{9}\begin{bmatrix}1\ 2\ 2\2\ 4\ 4\2\ 4\ 4\end{bmatrix}\frac{1}{9}\begin{bmatrix}1\ 2\ 2\2\ 4\ 4\2\ 4\ 4\end{bmatrix}$$<br>  $$=\frac{1}{81}\begin{bmatrix}9\ 18\ 18\18\ 36\ 36\18\ 36\ 36\end{bmatrix}=P$$<br>  (Since projecting a second time does not change anything)<br>  (因為任何向量投影在a上，都會是a的倍數(跟a平行)，再投影一次還是在a上，所以投影兩次的結果等同於投影一次)<br>  In general,<br>  $$P^2=\frac{aa^T}{a^Ta}\frac{aa^T}{a^Ta}=\frac{a(a^Ta)a^T}{(a^Ta)^2}=\frac{a^Ta}{(a^Ta)^2}aa^T=\frac{aa^T}{a^Ta}=P$$<br>  ($aa^T$可以被提出來跟消掉，是因為$a^Ta$是個實數)</p>
+</li>
+</ul>
+<h2 id="Projection-onto-a-Subspace"><a href="#Projection-onto-a-Subspace" class="headerlink" title="Projection onto a Subspace"></a>Projection onto a Subspace</h2><p>Start with $n$ independent vectors $a_1, a_2, …,a_n in R^m$<br>這邊假設有個 $R^m$ 的空間，並包含n個獨立向量($n \leq m$)，然後想把一個向量投影到這個空間上<br>Ｗe want to find<br>$p=\hat{x_1}a_1+\hat{x_2}a_2+ … +\hat{x_n}a_n$<br>as a projection of a given vector $b$<br>我們想要找到一個向量p使得，b投影到subspace上後等於p，因為p在subspace上，所以可以寫成$a_1, a_2, …,a_n$的線性組合<br>Let $A = \begin{bmatrix}a_1\ a_2\ …\ a_n\end{bmatrix}_{m\times n}$<br>Then $p=\begin{bmatrix}a_1\ a_2\ …\ a_n\end{bmatrix}\begin{bmatrix}\hat{x_1}\\hat{x_2}\.\.\\hat{x_n}\end{bmatrix}=A\hat{x}$<br>因為我們前面有提到$p$是$a_1, a_2, …,a_n$的線性組合，所以$p$在$A$的column space裡面，所以可以寫成像上面這樣<br>這邊可以跟之前投影到line上一樣去想，本來投影到line上之後error vector $e$($e=b-p$)就是$b$投影到向量$a$上後，夾角對出去那條垂直的線，所以$e$會跟$a$正交($e\perp a$)。那現在$e$就是b投影到平面A上面的後，夾角對出去的那條垂直線，在這個情況下，$e$會跟平面A上的所有向量正交，所以我們這邊後面要看的就是$e\perp (a_1, a_2, … a_n)$。<br>The error vector $b-A\hat{x}$ should be orthogonal to the subspace spanned by $a_1, a_2, … a_n$<br>這邊這個被spanned出來的subspace 其實就是$A$的column space<br>$$a_1^T(b-A\hat{x})=0\a_2^T(b-A\hat{x})=0\.\.\a_n^T(b-A\hat{x})=0$$<br>=&gt; $\begin{bmatrix}a_1^T\a_2^T\.\.\a_n^T\end{bmatrix}\begin{bmatrix}b-A\hat{x}\end{bmatrix}=\begin{bmatrix}0\0\.\.\0\end{bmatrix}$<br>=&gt; $A^T(b-A\hat{x})=0$<br>這邊很特別$e$要跟column space orthogonal其實就是代表e要在left nullspace裡面，就是$A^T$的null space<br>這一段的關鍵就是，我們在定義error vector $e$後，我們就知道error vector要跟每一個獨立向量$a_n$ orthogonal 所以就會寫出像上面那樣的式子<br>=&gt; $A^TA\hat{x}=A^Tb$(從上面往下推)<br>這邊$A^TA$是$n\times n$的正方形矩陣， $\hat{x}$是$n\times 1$, $A^Tb$是$n\times 1$。就是在解一個$n\times n$的聯立方程式<br>如果我們想要往後探討，這邊稍微調整一下上面那一式的寫法<br>The matrix $A^TA$ is square symmetric(他取轉置transpose之後還是他自己)<br>and it is invertible iff $a_1, a_2, … a_n$ are linear independent(這邊之後會證明，現在先相信啟超)<br>=&gt; $\hat{x}=(A^TA)^{-1}A^Tb$<br>$\therefore p=A\hat{x}=A(A^TA)^{-1}A^Tb$ (projection vector 可以寫成這樣)<br>所以Projection matrix就是 $A(A^TA)^{-1}A^T$</p>
+<ul>
+<li><p>Summary<br>投影到平面與 n=1(投影到line上面)做比較: 這邊剛好就是$A$變成只有一個column之後的形式，<br>可以看到有些$(A^TA)^{-1}$在n=1的時候被寫成$\frac{1}{a^Ta}$<br>這是因為n=1時這一項剛好會是個實數，所以可以寫成除的形式</p>
+<ul>
+<li><p>係數組合 $\hat{x}=(A^TA)^{-1}A^Tb$</p>
+<ul>
+<li>$\hat{x}=\frac{a^Tb}{a^Ta}$</li>
+</ul>
+</li>
+<li><p>投影向量 $p=A\hat{x}=A(A^TA)^{-1}A^Tb$</p>
+<ul>
+<li>$p=\frac{a^Tb}{a^Ta}a$</li>
+</ul>
+</li>
+<li><p>投影矩陣$P=A(A^TA)^{-1}A^T$</p>
+<ul>
+<li>$P=\frac{a^Ta}{a^Ta}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Note $P^2 = P$<br>  $$P^2=A(A^TA)^{-1}(A^TA)(A^TA)^{-1}A^T\=A(A^TA)^{-1}A^T=P$$<br>  同理，投影兩次結果還是跟投影一次一樣  </p>
+</li>
+<li><p>Example:把$b$投影到$A$上<br>  $A=\begin{bmatrix}1\ 0\1\ 1\1\ 2\end{bmatrix}$ and $b=\begin{bmatrix}6\0\0\end{bmatrix}$<br>  <strong>Projeciton vector:</strong><br>  $$A^TA=\begin{bmatrix}1\ 1\ 1\0\ 1\ 2\end{bmatrix}\begin{bmatrix}1\ 0\1\ 1\1\ 2\end{bmatrix}=\begin{bmatrix}3\ 3\3\ 5\end{bmatrix}$$<br>  $$A^Tb=\begin{bmatrix}1\ 1\ 1\0\ 1\ 2\end{bmatrix}\begin{bmatrix}6\0\0\end{bmatrix}=\begin{bmatrix}6\0\end{bmatrix}$$<br>  $$A^TA\hat{x}=A^Tb$$<br>  =&gt; $\begin{bmatrix}3\ 3\3\ 5\end{bmatrix}\begin{bmatrix}\hat{x_1}\\hat{x_2}\end{bmatrix}=\begin{bmatrix}6\0\end{bmatrix}$<br>  =&gt; $\begin{bmatrix}\hat{x_1}\\hat{x_2}\end{bmatrix}=\begin{bmatrix}5\-3\end{bmatrix}$<br>  $\therefore p=A\hat{x}=\begin{bmatrix}1\ 0\1\ 1\1\ 2\end{bmatrix}\begin{bmatrix}5\-3\end{bmatrix}=\begin{bmatrix}5\2\-1\end{bmatrix}$<br>  <strong>Verify:</strong><br>  $e=b-p=\begin{bmatrix}6\0\0\end{bmatrix}-\begin{bmatrix}5\2\-1\end{bmatrix}=\begin{bmatrix}1\-2\1\end{bmatrix}$<br>  $A^Te=\begin{bmatrix}1\ 1\ 1\0\ 1\ 2\end{bmatrix}\begin{bmatrix}1\-2\1\end{bmatrix}=\begin{bmatrix}0\0\end{bmatrix}$<br>  $e$ in left nullspace of $A$<br>  <strong>Projection Matrix:</strong><br>  $P=A(A^TA)^{-1}A^T=\frac{1}{6}\begin{bmatrix}5\ 2\ -1\2\ 2\ 2\-1\ 2\ 5\end{bmatrix}$<br>  $P^2=P$</p>
+</li>
+<li><p>Chaim: $rank(A^TA)=rank(AA^T)=rank(A)$<br>  只要能夠證明這幾個矩陣的rank數目相同，就能夠證明前面的inverterable<br>  其中$A^TA_{n\times n}$,  $AA^T_{m\times m}$, $A_{m\times n}$都是不同形狀的矩陣  </p>
+<ul>
+<li>Proof:<br>要證明兩個rank一樣，只要證明兩個null space dimension一樣。(因為null space的dimension = n - r)<br>We first show that $A^TA$ has the same nullspace as A<br>i.e., $A^TAx=0 &lt;=&gt; Ax=0$<br>“&lt;=”<br>$Ax=0$<br>=&gt; $A^TA=A^T0=0$<br>=&gt; $A^TAx=0$<br>“=&gt;”<br>$A^TAx=0$<br>=&gt; $x^TA^TAx=x^T0$<br>左右兩邊同乘$x^T$湊成對稱的形式，會發現前面就是$x^TA^T$就是$(Ax)^T$<br>=&gt; $(Ax)^T(Ax)=0$<br>=&gt; $||Ax||^2=0$<br>因為向量長度為零的向量就是零向量<br>=&gt; Ax=0<br>Therefore, $N(A^TA)=N(A)$,<br>which implies $n-rank(A^TA)=b-rank(A)$<br>=&gt; $rank(A^TA)=rank(A)$<br>同理我們只要把$A^T$換成$A$就能得到一樣的結果<br>Similarly, putting $A^T$ as $A$, we can get $rank(AA^T)=rank(A^T)=rank(A)$</li>
+</ul>
+</li>
+</ul>
 
       
       <!-- 打赏 -->
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://thingnotok.github.io/2020/01/28/hello-world/" data-id="ck5xmj0v300085nqdjlgl4pvu"
+      <a data-url="https://thingnotok.github.io/2020/01/28/Linear-Algebra-CH11-B/" data-id="ck5xmj0uk00015nqd5w3dqexw"
         class="article-share-link">分享</a>
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linear-Algebra/">Linear-Algebra</a></li></ul>
+
     </footer>
 
   </div>
@@ -116,15 +150,20 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/01/28/Linear-Algebra-CH10-A/" class="article-nav-link">
+      <a href="/2020/01/28/Linear-Algebra-CH12-A/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Linear-Algebra-CH10-A
+            Linear-Algebra-CH12-A
           
         </div>
       </a>
     
+    
+      <a href="/2020/01/28/Linear-Algebra-CH11-A/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Linear-Algebra-CH11-A</div>
+      </a>
     
   </nav>
 
